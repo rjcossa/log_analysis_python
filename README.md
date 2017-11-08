@@ -19,9 +19,22 @@ The questions that are currently answered by this log analysis tool are:
 * What are the most popular artists ?
 * On which days did more than 1% of requests lead to errors?
 
+
+
 ## Installation
 
-In order to install this application you just need to clone this repository
+In order to install this application you need to perform the following steps:
+
+* Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+* Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
+* Fork [this](https://github.com/udacity/fullstack-nanodegree-vm) Github Repository that has the VM Configuration
+* Change Directory to the vagrant folder in the repository
+* Type the command `vagrant up` to start the VM
+* After the vm starts successfully type the command `vagrant ssh`
+* Download `newsdata.sql` [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+* Place `newsdata.sql` in the /vagrant/ directory which is shared with your virtual machine
+* Change into the /vagrant/ directory
+* Run the command `psql -d news -f newsdata.sql` to import the data into the database
 
 The following sql commands must be executed in the  news database:
 
