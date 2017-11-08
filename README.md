@@ -32,7 +32,7 @@ create view articles_log as
 select articles.title as article_title,
 articles.author as articles_author,
 articles.slug as articles_slug from articles,
-(select substring from 10) as post_slug
+(select substring(path  from 10) as post_slug
 from log where path like '/article/%') as slugs
 where slugs.post_slug = articles.slug;
 
